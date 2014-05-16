@@ -1,0 +1,33 @@
+body {
+  text-align:center;
+  font-family: serif;
+}
+
+h1 {
+  font-size:4em;
+}
+
+#ttt-board {
+  display:inline-block;
+  margin:10px auto 20px 0;
+}
+
+#ttt-board input {
+  width:2em;
+  font-size:3em;
+  text-align:center;
+  border:3px solid green;
+}
+
+/* gaps and spacers */
+.gap {
+    display:block;
+    position:relative;
+    font-size:1px !important;
+}
+.full {
+    height:13em;
+}
+.half {
+    height:6em;
+}
