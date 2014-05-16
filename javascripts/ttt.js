@@ -1,5 +1,15 @@
 $(function() {
-  var ttt_board, cellmap, is_match, match_strategies;
+
+  var 
+    ttt_board
+    ,cellmap
+    ,match_strategies
+    ,is_match
+    ,get_character_token
+    ,get_value
+    ,update_board 
+    ,game_over
+  ;
 
   ttt_board = $('#ttt-board');
 
@@ -57,9 +67,10 @@ $(function() {
 
   game_over = function(winner) {
     var ttt_result = $('#ttt-result');
-    ttt_result.html('GAME OVER!  ' + winner + ' WINS!');
+    ttt_result.html('GAME OVER!  ' + winner + ' WINS!<br/><a href="./index.html">New Game</a>');
   }
 
+  /* main control */
   $('.ttt-cell').on('keyup', function(e) {
     var this_index = $('.ttt-cell').index(this);
     cellmap[this_index] = get_value($(this).val());
